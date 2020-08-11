@@ -1,0 +1,154 @@
+.membership {
+    padding: 21vh 0;
+}
+.row-membership {
+    display: flex;
+    color: white;
+}
+/* ======================  opacity =========================== */
+.heading,
+.col-mermbership-p,
+.col-membership-img-wrapper,
+.col-mermbership-btn {
+    opacity: 0;
+}
+/* =================================================================== */
+.heading {
+    margin: 1.5em 0;
+    text-align: center;
+    color: white;
+}
+.membership {
+    background-color: black;
+}
+.heading-p {
+    font-size: 20px;
+}
+.col-membership-img {
+    width: 100%;
+}
+.col-membership:last-child {
+    width: 60%;
+}
+.col-membership:first-child {
+    padding: 20px 20px;
+    text-align: justify;
+    width: 40%;
+}
+.col-mermbership-p {
+    margin-bottom: 4em;
+}
+
+.col-mermbership-btn {
+    padding: 0.5em 2em;
+    font-weight: bold;
+    border: 3px solid blue;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+    width: 100%;
+    z-index: 1;
+    transition: background-color 0.5s, color 0.7s;
+}
+.col-mermbership-btn::after {
+    content: "";
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.7);
+    transform: scale(0);
+    transition: transform 0.5s;
+}
+.col-mermbership-btn:hover::after {
+    transform: scale(1);
+    /* transform-origin: left; */
+}
+.fadeUp {
+    animation: fadeUp 0.5s 1.5s forwards;
+}
+.fadeRight {
+    animation: fadeRight 0.5s 1s forwards;
+}
+.fadeLeft {
+    animation: fadeLeft 0.5s 0.5s forwards;
+}
+.fadeDown {
+    animation: fadeDown 0.5s forwards ease-out;
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media only screen and (max-width: 990px) {
+    .row-membership {
+        flex-direction: column;
+    }
+    .col-membership:first-child,
+    .col-membership:last-child {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .col-membership:first-child {
+        padding: 2em 0;
+    }
+}
+iframe {
+    height: 100%;
+}
+/* ################################### indicator ############################# */
+.indicator {
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 0 0 200px 0;
+    z-index: -10000;
+    transition: border-radius 0.3s, background-color 1s;
+}
+.corners {
+    border-radius: 0;
+}

@@ -1,0 +1,260 @@
+/* ################################### indicator ############################# */
+.indicator {
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 0 0 200px 0;
+    z-index: -10000;
+    transition: border-radius 0.3s, background-color 1s;
+}
+.corners {
+    border-radius: 0;
+}
+/* ################################### achievements ############################# */
+.achievements-li {
+    list-style: none;
+    line-height: 1.4;
+    text-align: justify;
+    font-family: open sans;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    opacity: 0;
+}
+.achievements-li + .achievements-li {
+    margin-top: 30px;
+}
+.achievements {
+    animation: fadein 1.5s ease-out;
+    width: 80%;
+    margin: 120px auto 40px;
+    padding: 40px 0;
+    background-color: white;
+}
+.header-achievement {
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: open sans;
+    text-align: center;
+    margin: 80px 0;
+    margin-top: 20px;
+}
+.animation {
+    animation: fadein 1s ease-out forwards;
+}
+.achievement-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.achievement-ul {
+    padding: 0;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 774px) {
+    .img-wrapper {
+        margin-bottom: 40px;
+    }
+    .header-achievement {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 654px) {
+    .header-achievement {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 522px) {
+    .header-achievement {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}
+/* ################################## membership home ################################### */
+.achievement-home-heading,
+.events-home-heading {
+    text-align: center;
+    font-family: open sans;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+}
+.achievements-home {
+    padding-top: 0;
+}
+.achievement-home-li {
+    list-style: none;
+    transition: opacity 1s;
+    padding: 30px 0;
+    opacity: 0;
+    grid-column: 1 / 2;
+    grid-row: 1/2;
+    visibility: hidden;
+    line-height: 1.4;
+    text-align: left;
+    font-family: open sans;
+    font-size: 20px;
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+.whole-achievements-home-wrapper {
+    margin: 0 30px;
+}
+.slideshow-wrapper {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 150px;
+}
+.active-li {
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+.tt-upper {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.achievement-home-li-long {
+    font-size: 18px;
+}
+.left-arrow,
+.right-arrow {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+    grid-column: 1 / 2;
+    border-radius: 20px 0 0 20px;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+.right-arrow {
+    grid-column: 3 / 4;
+    border-radius: 0 20px 20px 0;
+}
+.left-arrow:hover,
+.right-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.achievement-home-ul {
+    padding: 150px 0;
+    grid-column: 2/ 3;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 150px;
+    grid-template-columns: 100%;
+    width: 100%;
+    padding: 0 20px;
+}
+.btn-nice-effect {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    text-align: center;
+    outline: 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    transition: color 0.5s 0.2s;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid blue;
+    overflow: hidden;
+    padding: 10px 60px;
+}
+.btn-nice-effect::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+    transition: transform 0.5s;
+    background-color: blue;
+    transform: scale(0);
+}
+.btn-nice-effect:hover::after {
+    transform: scale(1);
+}
+.btn-nice-effect:hover {
+    color: white;
+}
+@media screen and (max-width: 1090px) {
+    .achievement-home-li {
+        font-size: 15px;
+    }
+    .portfolio-box-mine {
+        margin: 0 20px 20px;
+    }
+    .achievement-home-li-long {
+        font-size: 12px;
+    }
+    .achievement-home-heading,
+    .events-home-heading,
+    .team-home-heading {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 586px) {
+    .achievement-home-li {
+        font-size: 12px;
+    }
+    .achievement-home-li-long {
+        font-size: 10px;
+    }
+    .portfolio-box-mine {
+        margin: 20px 0;
+    }
+    .achievement-home-heading,
+    .events-home-heading,
+    .team-home-heading {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 379px) {
+    .achievement-home-li {
+        font-size: 10px;
+    }
+    .content {
+        font-size: 10px;
+    }
+    .content a {
+        font-size: 10px;
+    }
+    .achievement-home-li-long {
+        font-size: 8px;
+    }
+    .achievement-home-heading,
+    .events-home-heading,
+    .team-home-heading {
+        font-size: 20px;
+    }
+}
+iframe {
+    width: 100%;
+}

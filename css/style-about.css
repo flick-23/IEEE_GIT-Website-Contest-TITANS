@@ -1,0 +1,110 @@
+/* ################################### indicator ############################# */
+.indicator {
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 0 0 200px 0;
+    z-index: -10000;
+    transition: border-radius 0.3s, background-color 1s;
+}
+.corners {
+    border-radius: 0;
+}
+/* ################################## about ############################ */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.listItems {
+    list-style: none;
+    line-height: 1.4;
+    text-align: justify;
+    padding: 0;
+    font-weight: 700;
+    font-size: 18px;
+}
+.about-git-actual-text {
+    line-height: 1.6;
+    text-align: justify;
+    font-weight: 700;
+    font-size: 18px;
+}
+.about-ul {
+    padding: 0;
+}
+.listItems + .listItems {
+    margin-top: 20px;
+}
+.about-img {
+    width: 100%;
+    max-width: 327px;
+}
+.about-heading {
+    font-size: 50px;
+}
+.background-gradient {
+    background: radial-gradient(
+        ellipse at center,
+        rgba(73, 155, 234, 1) 2%,
+        rgba(57, 126, 196, 1) 48%,
+        rgba(50, 114, 179, 1) 68%,
+        rgba(50, 114, 179, 1) 100%
+    );
+}
+.evol-heading,
+.about-git-heading {
+    font-size: 40px;
+}
+.evol-text,
+.about-git-text {
+    font-size: 50px;
+}
+.evol-sub-text {
+    font-size: 35px;
+}
+.fly {
+    opacity: 0;
+}
+.fly_up_fast {
+    opacity: 0;
+    animation: up 1s forwards;
+}
+@keyframes up {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about-heading,
+    .about-git-heading,
+    .about-git-text,
+    .evol-heading,
+    .images-about,
+    .evol-text,
+    .evol-sub-text {
+        text-align: center;
+    }
+    .evol-sub-text {
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+    .images-about {
+        margin-bottom: 40px;
+    }
+    section.padding-needed {
+        padding: 2rem 0 !important;
+    }
+    .p-bottom-needed {
+        padding-bottom: 10px;
+    }
+}

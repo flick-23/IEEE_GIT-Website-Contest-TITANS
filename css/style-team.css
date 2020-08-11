@@ -1,0 +1,121 @@
+/* ################################### indicator ############################# */
+.indicator {
+    background-color: blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 0 0 200px 0;
+    z-index: -10000;
+    transition: border-radius 0.3s, background-color 1s;
+}
+.corners {
+    border-radius: 0;
+}
+/* ################################## about ############################ */
+.outer-card {
+    height: 30vh;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    box-shadow: 20px 20px 20px black;
+    transition: 800ms ease-out transform, 800ms box-shadow ease-out;
+}
+.card {
+    background-color: transparent;
+    perspective: 400px;
+    border: 0;
+    margin: 0 20px;
+    object-fit: cover;
+}
+.front-card {
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.back-card {
+    position: relative;
+    transform: rotateX(-180deg);
+}
+.card:hover .outer-card {
+    transform: rotateX(-180deg);
+    box-shadow: none;
+}
+.team-img {
+    width: 100%;
+    height: 100%;
+}
+.content {
+    position: absolute;
+    color: white;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 30vh;
+}
+.team-profile {
+    font-size: 18px;
+    z-index: 20;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    transition: color 0.5s;
+}
+.team-profile:hover {
+    color: #4f7afa;
+    text-decoration: none;
+}
+/* ####################### Home page team ########################## */
+.team-home-heading {
+    text-align: center;
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+    margin: 30px 0;
+}
+section.team-home {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+@media screen and (max-width: 1090px) {
+    .team-home-heading {
+        font-size: 40px;
+    }
+    .content {
+        font-size: 15px;
+    }
+    .content a {
+        font-size: 15px;
+    }
+}
+.team-heading {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+@media screen and (max-width: 586px) {
+    .team-home-heading {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 379px) {
+    .team-home-heading {
+        font-size: 20px;
+    }
+    .content {
+        font-size: 10px;
+    }
+    .content a {
+        font-size: 10px;
+    }
+    .team-heading {
+        font-size: 40px;
+    }
+}
